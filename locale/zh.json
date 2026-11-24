@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "每日签到仪表盘",
+    "description": "聚合 WorkBuddy 多账号的签到状态、积分余额与签到流水，左侧导航一键打开。" ,
+    "detail": "docs/DETAIL.md"
+  }
+}

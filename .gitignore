@@ -1,0 +1,40 @@
+# ===== 依赖与构建产物 =====
+node_modules/
+dist/
+*.tgz
+
+# ===== 本机私有数据（绝对不能入库）=====
+# 签到流水账本：含真实账号名、账号 ID、余额，只应存在于本机 $DSH_HOME 下
+ledger.json
+ledger-*.json
+*.tmp
+
+# ===== 日志与临时文件 =====
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+
+# ===== 编辑器 / 系统 =====
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== 本地环境配置（可能含凭据）=====
+.env
+.env.*
+!.env.example
+
+# ===== 注意 =====
+# 下面这些「看似可忽略」的东西**不要**加进来，它们是插件的必要组成：
+#   index.js / client.js     插件本体
+#   cordis.patch.yml         加载条目，缺了插件不会激活
+#   locale/                  插件元信息（标题、描述）
+#   docs/                    插件详情页
+#   icon.svg                 插件图标
+# 被忽略会导致「安装成功但不显示」，而且不会有报错。

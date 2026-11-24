@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Check-in dashboard",
+    "description": "Aggregates WorkBuddy account check-in status, credit balances and check-in history, opened from the left sidebar.",
+    "detail": "docs/DETAIL.md"
+  }
+}

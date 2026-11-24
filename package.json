@@ -1,0 +1,47 @@
+{
+  "name": "dsh-checkin-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "每日签到仪表盘：聚合 WorkBuddy 多账号签到状态、积分与签到流水，提供左侧导航入口与可视化页面。",
+  "dependencies": {
+    "dsh-connect-workbuddy-models": "^0.1.4"
+  },
+  "peerDependencies": {
+    "dsh-connect-workbuddy-models": "^0.1.4"
+  },
+  "peerDependenciesMeta": {
+    "dsh-connect-workbuddy-models": {
+      "optional": true
+    }
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale",
+    "docs",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}
